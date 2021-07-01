@@ -25,7 +25,7 @@ notesRouter
       .catch(next)
   })
   .post(jsonParser, (req, res, next) => {
-    const { note_name, folder_id, content } = req.body
+    const { note_name, folder_id, content, modified_date } = req.body
     const newNote = { note_name, folder_id, content }
     const knexInstance = req.app.get('db')
 
