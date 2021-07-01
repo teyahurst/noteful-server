@@ -69,7 +69,7 @@ notesRouter
     const knexInstance = req.app.get('db')
     NotesService.deleteNote(knexInstance, req.params.note_id)
     .then(() => {
-      res.status(204).end()
+      res.status(204).json({})
     })
     .catch(next)
   })
